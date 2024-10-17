@@ -14,4 +14,11 @@
   - View the current inventory.
   - Search for items by name.
 
+## Version 1.2
+- 2024-10-17 
+- fixed remove item crashes
+- added instructions for removing items
+- added more displays for inventory for ease of use
+
+
 
