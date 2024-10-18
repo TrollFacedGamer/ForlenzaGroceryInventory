@@ -20,5 +20,11 @@
 - added instructions for removing items
 - added more displays for inventory for ease of use
 
+## Version 1.3
+- 2024-10-18
+- adding existing item will now display a prompt for replacement
+- fixed change quantity bug
+- fix add item data type (inputs)
+
 
 

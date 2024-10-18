@@ -8,11 +8,12 @@ def add_item(inventory, name, price, quantity):
     price (str): The price of the item
     quantity (str): The quantity of the item
     """
-    #added if statments to check is name aready present
-    if name in inventory[name]:
+    #added if else statment to check if name aready present
+    if name in inventory:
         print("Warning, adding a new item with the same name as a existing item will cause the new item to override the old item.")
         continue_question = input("Do you wish to continue?(yes/no)")
-    
+
+        #add if statments for confirmation
         if continue_question == "yes":
             continue_yn = True
         elif continue_question == "no":
@@ -20,6 +21,7 @@ def add_item(inventory, name, price, quantity):
         else:    
             print("error: you can only enter yes and no as a response, no uppercasae.")
 
+        #if continue_yn is true
         if continue_yn:
             inventory[name] = {"price": price, "quantity": quantity}
             print(f"{name} added to the inventory.")
@@ -51,7 +53,8 @@ def update_quantity(inventory, item_name, new_quantity):
     item_name (str): The name of the item to update
     new_quantity (str): The new quantity of the item
     """
-    inventory[item_name]["quantity"] == new_quantity
+    #==to= for value assignment
+    inventory[item_name]["quantity"] = new_quantity
     print(f"{item_name} quantity updated to {new_quantity}.")
 
 def display_inventory(inventory):
@@ -83,8 +86,8 @@ while True:
         #auto display for easy use
         display_inventory(inventory)
         name = input("Enter item name: ")
-        #changed value of proce input
-        price = int(input("Enter item price: "))
+        #changed type of process input
+        price = float(input("Enter item price: "))
         quantity = int(input("Enter item quantity: "))
         add_item(inventory, name, price, quantity)
     elif choice == "2":
